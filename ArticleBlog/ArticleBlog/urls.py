@@ -14,8 +14,14 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, re_path
+from ArticleBlog.views import *
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    # 组匹配 两个括号代表姓名和年龄
+    # re_path('^example/(\w+)/(\d{1,2})$', example)
+    # 命名组匹配 （?P<参数>规则）
+    re_path('^example/(?P<name>\w+)/(?P<age>\d{1,2})$', example)
+
 ]
