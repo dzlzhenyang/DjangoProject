@@ -1,5 +1,5 @@
 """
-使用之前请按照 requests和lxml模块
+使用之前请按装 requests和lxml模块
 """
 
 import pymysql
